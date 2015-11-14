@@ -17,7 +17,7 @@
 		<!-- page specific plugin styles -->
 
 		<!-- fonts -->
-
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.full.min.css" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
 
 		<!-- ace styles -->
@@ -511,19 +511,8 @@
 
 							</tbody>
 						</table>
-						<a href="#" id="id-btn-dialog2" class="btn btn-info btn-sm">Confirm Dialog</a>
-						<div id="dialog-confirm" class="hide">
-							<div class="alert alert-info bigger-110">
-								These items will be permanently deleted and cannot be recovered.
-							</div>
-
-							<div class="space-6"></div>
-
-							<p class="bigger-110 bolder center grey">
-								<i class="icon-hand-right blue bigger-120"></i> Are you sure?
-							</p>
-						</div>
-						<!-- #dialog-confirm -->
+						<a class="btn btn-primary" id="add-user">添加学生</a>
+						
 
 				</div>
 
@@ -532,45 +521,39 @@
 
 			</div>
 			<!-- /.main-container-inner -->
-
+			<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="height: auto; width: 300px; top: 71px; left: 561px;display:none" id="add-user-modal">
+				<div class="ui-dialog-titlebar ui-widget-header ">
+					<span class="ui-dialog-title">
+						<div class="widget-header">
+							<h4 class="smaller">添加成员</h4>
+						</div>
+						<button id="close-modal" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button>
+					</span>
+				</div>
+				<form action="" style="padding:20px;">
+					<div class="form-group clearfix">
+						<label class="col-sm-3 control-label">学号</label>
+						<div class="col-sm-9">
+							<input type="text" id="form-field-1" placeholder="Username" class="form-control">
+						</div>
+					</div>
+					<div class="form-group clearfix">
+						<div class="pull-right">
+							<button type="button" class="btn btn-primary ui-button">
+								<span class="ui-button-text">
+									添加
+								</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
-
+		<script src="assets/js/jquery-2.0.3.min.js"></script>
 		<!-- /.main-container -->
-		<script type="text/javascript">
-			jQuery(function($) {
-						$.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
-							_title: function(title) {
-								var $title = this.options.title || '&nbsp;'
-								if (("title_html" in this.options) && this.options.title_html == true)
-									title.html($title);
-								else title.text($title);
-							}
-						}));
-						$("#id-btn-dialog2").on('click', function(e) {
-							e.preventDefault();
-							$("#dialog-confirm").removeClass('hide').dialog({
-								resizable: false,
-								modal: true,
-								title: "<div class='widget-header'><h4 class='smaller'><i class='icon-warning-sign red'></i> Empty the recycle bin?</h4></div>",
-								title_html: true,
-								buttons: [{
-									html: "<i class='icon-trash bigger-110'></i>&nbsp; Delete all items",
-									"class": "btn btn-danger btn-xs",
-									click: function() {
-										$(this).dialog("close");
-									}
-								}, {
-									html: "<i class='icon-remove bigger-110'></i>&nbsp; Cancel",
-									"class": "btn btn-xs",
-									click: function() {
-										$(this).dialog("close");
-									}
-								}]
-							});
-						});
-					}
+		
 		<!-- basic scripts -->
-	    <script src="assets/js/jquery-2.0.3.min.js"></script>
+	    
 
 		<!--[if !IE]> -->
 
@@ -603,6 +586,16 @@
 		<div style="display:none">
 			<script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
 		</div>
+		<script>
+		$(function(){
+			$("#add-user").on("click", function() {
+				$("#add-user-modal").css("display", "block");
+			});
+			$("#close-modal").on("click", function() {
+				$("#add-user-modal").css("display", "none");
+			});
+		});
+		</script>
 	</body>
 
 </html>
