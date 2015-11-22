@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- saved from url=(0027)http://211.87.227.245/users -->
+<html>
 
 	<head>
 		<meta charset="utf-8" />
-		<title>添加人员</title>
+		<title>实验室人员信息</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- basic styles -->
-
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 
@@ -17,7 +17,7 @@
 		<!-- page specific plugin styles -->
 
 		<!-- fonts -->
-		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.full.min.css" />
+
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
 
 		<!-- ace styles -->
@@ -44,7 +44,7 @@
 		<![endif]-->
 	</head>
 
-	<body class="modal-open">
+	<body>
 		<div class="navbar navbar-default" id="navbar">
 			<script type="text/javascript">
 				try {
@@ -227,6 +227,38 @@
 								</li>
 
 								<li>
+									<a href="#">
+										<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Susan:</span> 不知道翻译...
+										</span>
+
+										<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>20分钟以前</span>
+										</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Bob:</span> 到底是不是英文 ...
+										</span>
+
+										<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>下午3:15</span>
+										</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
 									<a href="inbox.html">
 										查看所有消息
 										<i class="icon-arrow-right"></i>
@@ -275,7 +307,6 @@
 			</div>
 			<!-- /.container -->
 		</div>
-
 		<div class="main-container" id="main-container">
 			<script type="text/javascript">
 				try {
@@ -401,7 +432,7 @@
 								</li>
 								<li>
 									<a href="won-login.html">
-										<i class="icon-double-angle-right"></i> 添加人员
+										<i class="icon-double-angle-right"></i> 人员注册
 									</a>
 								</li>
 								<li>
@@ -424,7 +455,6 @@
 						} catch (e) {}
 					</script>
 				</div>
-
 				<div class="main-content">
 					<div class="breadcrumbs" id="breadcrumbs">
 						<script type="text/javascript">
@@ -436,11 +466,11 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="icon-home home-icon"></i>
-								<a href="#">实验室管理</a>
+								<a href="#">实验室人员信息</a>
 							</li>
-							<li class="active">添加人员详情</li>
 						</ul>
 						<!-- .breadcrumb -->
+
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
 								<span class="input-icon">
@@ -451,115 +481,72 @@
 						</div>
 						<!-- #nav-search -->
 					</div>
-					<form class="row col-sm-12">
-						<table id="sample-table-2" class="table table-striped table-bordered table-hover">
-							<thead>
-								<h3 class="blue">已添加名单如下<i class="icon-double-angle-right "></i></h3>
-							</thead>
-							<tbody>
-								<tr>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-								</tr>
-								<tr>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-								</tr>
-								<tr>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-									<td>2013000130213
-										<button><i class="icon-remove red bigger-140"></i></button>
-									</td>
-								</tr>
+					
+					<div class=" row col-xs-12">
+						<!-- PAGE CONTENT BEGINS -->
+						<div id="accordion">
+							<div class="panel">
 
-							</tbody>
-						</table>
-						<a class="btn btn-primary" id="add-user">添 加</a>
+								<h5 class="list-group-item">
+						            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+						                <i class="icon-angle-down bigger-110" data-icon-hide="icon-angle-down" data-icon-show="icon-angle-right"></i>
+						                ING实验室
+						            </a>
+						        </h5>
 
+								<div class="panel-collapse collapse" id="collapseOne">
+									<div class="panel-body">
+										<table id="sample-table-2" class="table table-striped table-bordered table-hover">
+											<thead>
+												<tr>
+													<th>学号</th>
+													<th>姓名</th>
+													<th>班级</th>
+													<th>电话</th>
+													<th>邮箱</th>
+												</tr>
+											</thead>
+
+											<tbody>
+
+												<tr>
+													<td>201200301023</td>
+													<td>陈夏雨</td>
+													<td>12级5班</td>
+													<td>18366112961</td>
+													<td>codamaker@gmail.com</td>
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+						<!-- PAGE CONTENT ENDS -->
+					
 				</div>
-
-				</form>
 				<!-- /.main-content -->
 
 			</div>
 			<!-- /.main-container-inner -->
-			<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="height: auto; width: 300px; top: 71px; left: 561px;display:none" id="add-user-modal">
-				<div class="ui-dialog-titlebar ui-widget-header ">
-					<span class="ui-dialog-title">
-						<div class="widget-header">
-							<h4 class="smaller">添加人员</h4>
-						</div>
-						<button id="close-modal" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button>
-					</span>
-				</div>
-				<form action="" style="padding:20px;">
-					<div class="form-group clearfix">
-						<label class="col-sm-3 control-label">学号</label>
-						<div class="col-sm-9">
-							<input type="text" id="form-field-1" placeholder="Username" class="form-control">
-						</div>
-					</div>
-					<div class="form-group clearfix">
-						<div class="pull-right">
-							<button type="button" class="btn btn-primary ui-button">
-								<span class="ui-button-text">
-									确 定
-								</span>
-							</button>
-						</div>
-					</div>
-				</form>
-			</div>
+
 		</div>
-		<script src="assets/js/jquery-2.0.3.min.js"></script>
+		<!-- /.row -->
 		<!-- /.main-container -->
 
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
 
+		<script src="assets/js/jquery-2.0.3.min.js"></script>
+
 		<!-- <![endif]-->
 
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/typeahead-bs2.min.js"></script>
-		<script src="assets/js/bootstrap-modal.js"></script>
+
 		<!-- page specific plugin scripts -->
 
 		<!--[if lte IE 8]>
@@ -581,23 +568,6 @@
 		<script src="assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
-		<div style="display:none">
-			<script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
-		</div>
-		<script>
-			$(function() {
-			    $(".icon-remove").on("click", function() {
-			    	$(this).parent().parent().remove();
-			    });
-			    
-				$("#add-user").on("click", function() {
-					$("#add-user-modal").css("display", "block");
-				});
-				$("#close-modal").on("click", function() {
-					$("#add-user-modal").css("display", "none");
-				});
-			});
-		</script>
 	</body>
 
 </html>

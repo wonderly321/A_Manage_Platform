@@ -431,7 +431,7 @@
 								</li>
 								<li>
 									<a href="won-login.html">
-										<i class="icon-double-angle-right"></i> 人员注册
+										<i class="icon-double-angle-right"></i> 添加人员
 									</a>
 								</li>
 								<li>
@@ -576,6 +576,16 @@
 								</div>
 
 								<div class="space-20"></div>
+								<div class="alert alert-success">
+									
+									<strong>
+										<i class="icon-bullhorn"></i>
+										 审核已通过……
+									</strong>
+
+									
+								</div>
+
 
 								<div class="tabbable">
 									<ul class="nav nav-tabs" id="myTab">
@@ -604,8 +614,11 @@
 															<td>张希是</td>
 															<td>2013000130213</td>
 															<td>15523914694</td>
-															<td>
-																<i class="icon-ok "></i>
+											    			<td>
+																&nbsp;&nbsp;&nbsp;
+																<i class="icon-ok"></i>
+																&nbsp;&nbsp;&nbsp;
+																<i class="icon-remove"></i>
 															</td>
 														</tr>
 														<tr>
@@ -613,7 +626,10 @@
 															<td>2013000230113</td>
 															<td>15137166984</td>
 															<td>
-																<i class="icon-ok "></i>
+																&nbsp;&nbsp;&nbsp;
+																<i class="icon-ok"></i>
+																&nbsp;&nbsp;&nbsp;
+																<i class="icon-remove"></i>
 															</td>
 														</tr>
 														<tr>
@@ -621,6 +637,9 @@
 															<td>2013000130313</td>
 															<td>15523234124</td>
 															<td>
+																&nbsp;&nbsp;&nbsp;
+																<i class="icon-ok "></i>
+																&nbsp;&nbsp;&nbsp;
 																<i class="icon-remove "></i>
 															</td>
 														</tr>
@@ -637,7 +656,7 @@
 
 				</div>
 				<!-- /.main-container -->
-
+				
 				<!-- basic scripts -->
 
 				<!--[if !IE]> -->
@@ -670,6 +689,19 @@
 				<script src="assets/js/ace.min.js"></script>
 
 				<!-- inline scripts related to this page -->
+				<script>
+				    $(function() {
+			            $(".icon-remove").on("click", function() {
+			            	var res = confirm("确定删除？");
+			            	if (res) {
+			            		$(this).parent().parent().remove();
+			            	}
+			            });
+			            $(".icon-ok").on("click", function() {
+				            $(this).parent().html('<span class="label label-success arrowed-right">已通过</span>');
+			            });
+		            });
+				</script>
 
 	</body>
 
