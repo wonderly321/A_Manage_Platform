@@ -575,11 +575,11 @@
 									</div>
 								</div>
 
-								<div class="space-20"></div>
-								
-									
-								<button class="btn btn-info">审核通过</button>
-
+								<div class="col-xs-12">
+									<br />
+									<span class="btn btn-info btn-sm" id="checked-success">审核通过</span>
+									<span class="btn btn-info btn-sm" id="checked-failed">审核不通过</span>
+								</div>
 
 								
 							</div>
@@ -630,7 +630,22 @@
 			            		
 			            	}
 			            });
-			            
+			            $('#checked-success').on('click', function() {
+							var res=confirm("确定通过?")
+							if (res) {
+								$(this).parent().html('<br/><div class="alert alert-success"><strong><i class="icon-bullhorn"></i> 审核已通过</strong></div>');
+							}
+						});
+						$('#checked-failed').on('click', function() {
+							var res=prompt("请给出理由：")
+							if (res) {
+								{$(this).parent().html('<br/><div class="alert alert-success"><strong><i class="icon-bullhorn"></i> 审核未通过</strong><div class="text"><br />理由如下：'+res+'</div></div>');}
+							}
+							else{
+								var blank=confirm("请填写不通过理由！")
+								
+							}
+						});
 		            });
 				</script>
 
